@@ -10,7 +10,7 @@ This Angular Application was made using BEM methodology, Facade Pattern and NgRx
 ## Facade Pattern and NgRx
 
 
-![alt text](https://github.com/danijorgesantos/ana/blob/master/ngrx-facade-diagram.png?raw=true)
+![alt text](https://github.com/danijorgesantos/ana/blob/master/reduxFlow.png?raw=true)
 
 Why NgRx if Angular already has a Dependency Injection system?
 
