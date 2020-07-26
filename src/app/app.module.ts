@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+import { RootStoreModule } from './root-store/root-store.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { StoreModule } from '@ngrx/store';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    RootStoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
