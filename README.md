@@ -1,27 +1,40 @@
 # Ana
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+This Angular Application was made using BEM methodology, Facade Pattern and NgRx, and dumb and smart components.
 
-## Development server
+## BEM methodology
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- BEM (Block, Element, Modifier) is a component-based approach to web development. The idea behind it is to divide the user interface into independent blocks. This makes interface development easy and fast even with a complex UI, and it allows reuse of existing code without copying and pasting.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Facade Pattern and NgRx
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![alt text](https://github.com/danijorgesantos/ana/blob/master/ngrx-facade-diagram.png?raw=true)
 
-## Running unit tests
+Why NgRx if Angular already has a Dependency Injection system?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+"You’ll know when you need Redux. If you aren’t sure if you need it, you don’t need it."
 
-## Running end-to-end tests
+- they solve the problem of component interaction via the Observable pattern
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- they provide a client-side cache if needed, to avoid doing repeated Ajax requests
 
-## Further help
+- They provide a place to put temporary UI state, as we fill in a large form or want to store search criteria in a search form when navigating between router views
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- and they solve the problem of allowing modification of client side transient data by multiple actors
+
+- One of the main benefits often presented to introduce a store is that it will improve the testability of the application.
+
+- The tooling ecosystem it provides
+
+In the middle of all of this, why use the Facade Pattern?
+
+- The facade allows the components to became isolated and only presentational components that simply render data from the Facade observables.
+
+
+## Dumb and Smart Components
+
+- Smart components keep track of state and interact with the Facade.
+
+- dumb components simply render the information that is given by the Smart component, they don´t know the state of the application or interact with the facade.
