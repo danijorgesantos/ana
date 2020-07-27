@@ -3,27 +3,31 @@ import { featureAdapter, initialState, State } from './state';
 
 export function featureReducer(state = initialState, action: Actions): State {
     switch (action.type) {
-        case ActionTypes.LOAD_REQUEST: {
+        case ActionTypes.INCREMENT: {
             return {
                 ...state,
-                isLoading: true,
-                error: null
+                count: state.count + 1
             };
         }
-        case ActionTypes.LOAD_SUCCESS: {
-            return featureAdapter.addAll(action.payload.items, {
-                ...state,
-                isLoading: false,
-                error: null
-            });
-        }
-        case ActionTypes.LOAD_FAILURE: {
+        case ActionTypes.DECREMENT: {
             return {
                 ...state,
-                isLoading: false,
-                error: action.payload.error
+                count: state.count - 1
             };
         }
+        case ActionTypes.RESET: {
+            return {
+                ...state,
+                count: 0
+            };
+        }
+        // case ActionTypes.LOAD_SUCCESS: {
+        //     return featureAdapter.addAll(action.payload.items, {
+        //         ...state,
+        //         isLoading: false,
+        //         error: null
+        //     });
+        // }
         default: {
             return state;
         }

@@ -1,13 +1,13 @@
-import * as JokeStoreActions from './actions';
-import * as JokeStoreSelectors from './selectors';
-import * as JokeStoreState from './state';
+import * as CounterStoreActions from './actions';
+import * as CounterStoreSelectors from './selectors';
+import * as CounterStoreState from './state';
 
 export {
   CounterStoreModule
 } from './counter-store.module';
 
 export {
-  JokeStoreActions,
-  JokeStoreSelectors,
-  JokeStoreState
+  CounterStoreActions,
+  CounterStoreSelectors,
+  CounterStoreState
 };

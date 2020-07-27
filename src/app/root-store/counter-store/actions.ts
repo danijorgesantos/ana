@@ -19,3 +19,10 @@ export class Reset implements Action {
 }
 
 export type Actions = Increment | Decrement | Reset;
+
+export const fromCounterActions = {
+    Increment,
+    Decrement,
+    Reset
+  };
+

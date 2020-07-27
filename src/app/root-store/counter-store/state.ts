@@ -10,13 +10,11 @@ export const featureAdapter: EntityAdapter<
 });
 
 export interface State extends EntityState<Joke> {
-  isLoading?: boolean;
-  error?: any;
+  count?: any;
 }
 
 export const initialState: State = featureAdapter.getInitialState(
   {
-    isLoading: false,
-    error: null
+    count: 0
   }
 );
