@@ -1,6 +1,6 @@
 # Ana
 
-This Angular Application was made using BEM methodology, Facade Pattern and NgRx, and dumb and smart components.
+This Angular Application displays a counter and was made using BEM methodology, Facade Pattern and NgRx, and dumb and smart components.
 
 ## BEM methodology
 

@@ -32,5 +32,4 @@ export class CounterComponent implements OnInit {
   onClickReset() {
     this.facade.Reset();
   }
-
 }
