@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
 import { Store } from '@ngrx/store';
-
-//import { CarsState } from './cars.reducer';
 import { selectCountState } from '../root-store/counter-store/selectors';
 import { Increment, Decrement, Reset } from '../root-store/counter-store/actions';
 
